@@ -33,7 +33,7 @@ class AuthController extends Controller
         Auth::login($user);
         $request->session()->regenerate(); 
 
-        return redirect()->route('tasks.index') // Redirecționează spre taskuri
+        return redirect()->route('tasks.index')
                  ->with('success', 'Cont creat și autentificare reușită!');
     }
 
